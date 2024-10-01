@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-26T08:37:38 IST" name="Default suite" finished-at="2024-09-26T08:37:39 IST" duration-ms="910">
+    <groups>
+    </groups>
+    <test started-at="2024-09-26T08:37:38 IST" name="Default test" finished-at="2024-09-26T08:37:39 IST" duration-ms="910">
+      <class name="datadriventesting.ExcelToDataProviderClass">
+        <test-method signature="runData(java.lang.Object,java.lang.Object)[pri:0, instance:datadriventesting.ExcelToDataProviderClass@399f45b1]" started-at="2024-09-26T08:37:39 IST" name="runData" data-provider="dataFromExcel" finished-at="2024-09-26T08:37:39 IST" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jay]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[421.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runData -->
+        <test-method signature="runData(java.lang.Object,java.lang.Object)[pri:0, instance:datadriventesting.ExcelToDataProviderClass@399f45b1]" started-at="2024-09-26T08:37:39 IST" name="runData" data-provider="dataFromExcel" finished-at="2024-09-26T08:37:39 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Gov]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[409.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runData -->
+        <test-method signature="runData(java.lang.Object,java.lang.Object)[pri:0, instance:datadriventesting.ExcelToDataProviderClass@399f45b1]" started-at="2024-09-26T08:37:39 IST" name="runData" data-provider="dataFromExcel" finished-at="2024-09-26T08:37:39 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Santu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[427.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runData -->
+        <test-method signature="runData(java.lang.Object,java.lang.Object)[pri:0, instance:datadriventesting.ExcelToDataProviderClass@399f45b1]" started-at="2024-09-26T08:37:39 IST" name="runData" data-provider="dataFromExcel" finished-at="2024-09-26T08:37:39 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[maha]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[428.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runData -->
+        <test-method signature="runData(java.lang.Object,java.lang.Object)[pri:0, instance:datadriventesting.ExcelToDataProviderClass@399f45b1]" started-at="2024-09-26T08:37:39 IST" name="runData" data-provider="dataFromExcel" finished-at="2024-09-26T08:37:39 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runData -->
+      </class> <!-- datadriventesting.ExcelToDataProviderClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
