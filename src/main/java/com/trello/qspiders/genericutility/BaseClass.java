@@ -70,12 +70,12 @@ public class BaseClass {
 		webDriverUtils.partialTitle(driver, "Log in with Atlassian account");
 		loginToCon.getPasswordTextfield().sendKeys(fileUtils.toReadData("password"));
 		loginToCon.getLoginSubmitButton().submit();
-		try {
+		/*try {
 		if(loginToCon.getContinueWithout2StepVerify().isDisplayed()){
 		loginToCon.getContinueWithout2StepVerify().click();}
 		}catch(NoSuchElementException e) {
 			System.out.println("handled exception");
-		}
+		}*/
 	}
 
 	@AfterMethod
