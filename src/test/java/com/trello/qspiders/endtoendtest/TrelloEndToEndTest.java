@@ -1,5 +1,6 @@
 package com.trello.qspiders.endtoendtest;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.List;
@@ -31,16 +32,20 @@ public class TrelloEndToEndTest extends BaseClass {
 		actions.moveToElement(boardPage.getCreateBoardbutton()).pause(1000)
 				.clickAndHold(boardPage.getCreateBoardbutton()).build().perform();
 		boardPage.getCreateBoardbutton().click();
-		webDriverUtils.partialUrl(driver, "qcsa19");
+		Assert.assertEquals(true, webDriverUtils.partialUrl(driver, "qcsa19"));
 		TrelloUserCreatedBoardPage userCreatedBoardPage = new TrelloUserCreatedBoardPage(driver);
+		if(userCreatedBoardPage.getJiraPopupEle().isDisplayed()) {
+			userCreatedBoardPage.getMinimizePopupButton().click();
+		}
 		webDriverUtils.elementToBeClickable(driver, userCreatedBoardPage.getShowMenuOption());
 		userCreatedBoardPage.getShowMenuOption().click();
 		//userCreatedBoardPage.getMoreOption().click();
-		//Thread.sleep(5000);
-		userCreatedBoardPage.getCloseBoardOption().click();
+		Thread.sleep(5000);
+		actions.scrollToElement(userCreatedBoardPage.getCloseBoardOption()).pause(3000).click().build().perform();
 		userCreatedBoardPage.getCloseButton().click();
-		userCreatedBoardPage.getPermanentDeleteBoard().click();
+		actions.scrollToElement(userCreatedBoardPage.getPermanentDeleteBoard()).pause(3000).click().build().perform();
 		userCreatedBoardPage.getDeleteButton().click();
+		System.out.println("Board Successfully Deleted");
 	}
 
 	@Test(priority = 3)

@@ -13,7 +13,7 @@ public class TrelloBoardPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//li[.='Create new board']")
+	@FindBy(xpath = "//span[text()='Create new board']/../..")
 	private WebElement createBoardNewOption;
 
 	@FindBy(css = "input[data-testid='create-board-title-input']")

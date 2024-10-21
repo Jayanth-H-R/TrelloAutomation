@@ -33,7 +33,7 @@ public class TrelloUserCreatedBoardPage {
 	@FindBy(xpath = "//a[contains(.,'More')]")
 	private WebElement moreOption;
 
-	@FindBy(xpath = "//a[contains(.,'Close board')]")
+	@FindBy(xpath = "//div[text()='Close board']/..")
 	private WebElement closeBoardOption;
 
 	@FindBy(css = "input[value='Close']")
@@ -92,6 +92,21 @@ public class TrelloUserCreatedBoardPage {
 
 	@FindBy(xpath = "//button[@data-testid='popover-close']")
 	private WebElement labelCloseButton;
+	
+	@FindBy(xpath = "//button[text()='Try it free']")
+	private WebElement jiraPopupEle;
+	
+	@FindBy(xpath = "//button[@title='Minimize']")
+	private WebElement minimizePopupButton;
+	
+
+	public WebElement getJiraPopupEle() {
+		return jiraPopupEle;
+	}
+
+	public WebElement getMinimizePopupButton() {
+		return minimizePopupButton;
+	}
 
 	public WebElement getCardCloseDialog() {
 		return cardCloseDialog;

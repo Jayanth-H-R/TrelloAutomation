@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="datadriventesting.ExcelToDataProviderClass">
+      <class name="com.trello.qspiders.endtoendtest.TrelloEndToEndTest">
         <methods>
-          <include name="runData" invocation-numbers="0 1 2 3 4"/>
+          <include name="configureBeforeMethod"/>
+          <include name="configureBeforeClass"/>
+          <include name="configureAfterClass"/>
+          <include name="createAndDeleteBoard"/>
+          <include name="configureAfterMethod"/>
         </methods>
-      </class> <!-- datadriventesting.ExcelToDataProviderClass -->
+      </class> <!-- com.trello.qspiders.endtoendtest.TrelloEndToEndTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -11,6 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -57,6 +58,7 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void configureBeforeMethod() throws IOException, InterruptedException {
+		webDriverUtils.implicitWaitInSeconds(driver);
 		TrelloHomePage homePage = new TrelloHomePage(driver);
 		Thread.sleep(5000);
 		homePage.getLoginOption().click();
@@ -70,12 +72,17 @@ public class BaseClass {
 		webDriverUtils.partialTitle(driver, "Log in with Atlassian account");
 		loginToCon.getPasswordTextfield().sendKeys(fileUtils.toReadData("password"));
 		loginToCon.getLoginSubmitButton().submit();
-		/*try {
+		String title = driver.getTitle();
+		//webDriverUtils.partialTitle(driver, " Boards");
+		//if(title.equalsIgnoreCase("Boards | Trello")) 
+		try {
 		if(loginToCon.getContinueWithout2StepVerify().isDisplayed()){
 		loginToCon.getContinueWithout2StepVerify().click();}
 		}catch(NoSuchElementException e) {
 			System.out.println("handled exception");
-		}*/
+		}
+		
+
 	}
 
 	@AfterMethod
