@@ -54,6 +54,12 @@ public class WebDriverUtility {
 		return validation;
 		
 	}
+	
+public WebElement elementIsVisible(WebDriver driver, WebElement ele) {
+	WebDriverWait myWait=new WebDriverWait(driver, Duration.ofSeconds(8));
+	WebElement element = myWait.until(ExpectedConditions.visibilityOf(ele));
+	return element;
+}
 
 	
 	

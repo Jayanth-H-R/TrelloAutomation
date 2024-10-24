@@ -8,8 +8,8 @@
           <include name="configureBeforeMethod"/>
           <include name="configureBeforeClass"/>
           <include name="configureAfterClass"/>
-          <include name="createAndDeleteBoard"/>
           <include name="configureAfterMethod"/>
+          <include name="addListsToBoard"/>
         </methods>
       </class> <!-- com.trello.qspiders.endtoendtest.TrelloEndToEndTest -->
     </classes>

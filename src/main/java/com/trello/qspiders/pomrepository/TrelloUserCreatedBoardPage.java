@@ -45,16 +45,16 @@ public class TrelloUserCreatedBoardPage {
 	@FindBy(xpath = "//button[text()='Delete']")
 	private WebElement deleteButton;
 
-	@FindBy(xpath = "//a[.='Add a list']")
+	@FindBy(xpath = "//button[text()='Add a list']")
 	private WebElement addListOption;
 
 	@FindBy(xpath = "//a[.='Add another list']")
 	private WebElement addAnotherListOption;
 
-	@FindBy(css = "input[value='Add list']")
+	@FindBy(xpath = "//button[text()='Add list']")
 	private WebElement addThisList;
 
-	@FindBy(xpath = "//h2[text()='Exceptions']/../..//span[text()='Add a card']")
+	@FindBy(xpath = "//h2[text()='Exceptions']//ancestor::div[@data-testid='list']//button[text()='Add a card']")
 	private WebElement exceptionsAddCard;
 
 	@FindBy(className = "board-canvas")

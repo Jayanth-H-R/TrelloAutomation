@@ -73,13 +73,14 @@ public class BaseClass {
 		loginToCon.getPasswordTextfield().sendKeys(fileUtils.toReadData("password"));
 		loginToCon.getLoginSubmitButton().submit();
 		String title = driver.getTitle();
-		//webDriverUtils.partialTitle(driver, " Boards");
-		//if(title.equalsIgnoreCase("Boards | Trello")) 
+		//webDriverUtils.partialTitle(driver, "Boards");
+		if(title.equalsIgnoreCase("Login to continue")) {
 		try {
 		if(loginToCon.getContinueWithout2StepVerify().isDisplayed()){
 		loginToCon.getContinueWithout2StepVerify().click();}
 		}catch(NoSuchElementException e) {
 			System.out.println("handled exception");
+		}
 		}
 		
 
